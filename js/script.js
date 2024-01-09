@@ -1,5 +1,7 @@
 console.log ('JS OK')
 
+// ----- Primo Esercizio -----
+
 // - 1
 let userWord = prompt("Inserisci una parola:");
 
@@ -23,3 +25,6 @@ function isPalindrome(text) {
         return "La parola non è palindroma.";
     }
 }
+
+
+
