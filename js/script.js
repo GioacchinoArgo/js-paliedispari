@@ -8,24 +8,21 @@ let userWord = prompt("Inserisci una parola:");
 // - 2
 const result = isPalindrome(userWord);
 
-console.log(result);
-
 // - 3
 function isPalindrome(text) {
 
     // -4
     text = text.toLowerCase();
 
-    console.log(text)
-
     // - 5
     if (text === text.split('').reverse().join('')) {
-        return "La parola è palindroma!";
+        return true;
     } else {
-        return "La parola non è palindroma.";
+        return false;
     }
 }
 
+result ? console.log ("La parola è palindroma!") : console.log ("La parola non è palindroma.")
 
 // ----- Secondo Esercizio -----
 
@@ -38,13 +35,16 @@ console.log(`Hai scelto: ${userNumber}`)
 console.log(`Hai scelto: ${guess}`)
 
 // - 2
-const cpuNumber = randomNumber()
+const cpuNumber = randomNumber(1, 5);
 
-function randomNumber () {
-    return Math.floor(Math.random() * 5) + 1;
+function randomNumber(min, max) {
+    const randomNumber = Math.floor(Math.random() * (max + 1 - min)) + min;
+    console.log(`il computer ha fatto: ${randomNumber}`)
+    return randomNumber;
 }
 
-console.log(`il computer ha fatto: ${cpuNumber}`)
+
+
 
 // - 3
 const sum = sumNumber(userNumber, cpuNumber)
